@@ -19,9 +19,7 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
@@ -29,6 +27,9 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   width: 1200px;
   margin: 0 auto;
 }
@@ -57,8 +58,8 @@ body {
 
 .navigation {
   display: flex;
-  width: 1060px;
-  margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .logo {
@@ -115,7 +116,6 @@ body {
 
 .advantages-item {
   display: flex;
-  width: 1200px;
   background-color: #83B3D3;
   text-align: center;
 }
@@ -139,7 +139,6 @@ body {
 
 .features-wrapper {
   display: flex;
-  width: 1200px;
 }
 
 .features-title {
@@ -151,7 +150,7 @@ body {
 }
 
 .features-item {
-  width: 400px;
+  width: 33.33%;
   background: rgba(131, 179, 211, 0.12);
   text-align: center;
 }
@@ -219,7 +218,6 @@ body {
 .page-footer {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
 }
 
 .footer-social-list {
@@ -253,7 +251,6 @@ body {
 }
 
 .selection-hotels {
-  width: 1200px;
   background-color: #008B8B;
   background-image: url("../images/catalog-background.jpg");
   background-size: cover;
@@ -272,15 +269,13 @@ body {
   line-height: 21px;
 }
 
-.catalog-hotels {
-  width: 1200px;
-}
 .catalog-filter {
   display: flex;
   justify-content: space-between;
-  width: 1057px;
-  margin: 0 auto;
+  padding-left: 72px;
+  padding-right: 72px;
 }
+
 .catalog-filter-title {
   font-size: 20px;
   line-height: 26px;
@@ -289,8 +284,8 @@ body {
 
 .sorting-card {
   display: flex;
-  width: 1057px;
-  margin: 0 auto;
+  padding-left: 72px;
+  padding-right: 72px;
 
 }
 
@@ -309,7 +304,7 @@ body {
 }
 
 .sorting-card-result {
-  max-width: 372p;
+  max-width: 372px;
   margin-right: auto;
   font-size: 30px;
   line-height: 39px;
@@ -319,8 +314,10 @@ body {
 
 .hotel-list {
   display: flex;
-  width: 1056px;
-  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 72px;
+  padding-right: 72px;
 }
 
 .hotel-card {
@@ -352,8 +349,8 @@ body {
 }
 
 .upload-more {
-  width: 1056px;
-  margin: 0 auto;
+  margin-left: 72px;
+  margin-right: 72px;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
 }
@@ -366,7 +363,8 @@ body {
 
 .pagination {
   display: flex;
-  width: 1056px;
+  padding-left: 72px;
+  padding-right: 72px;
 }
 
 .pagination-list {
@@ -397,6 +395,8 @@ body {
 }
 
 .newsletter-inner {
+  padding-left: 200px;
+  padding-right: 200px;
   color: #000000;
   text-align: center;
 }
