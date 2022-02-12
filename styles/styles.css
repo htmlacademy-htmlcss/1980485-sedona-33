@@ -151,6 +151,11 @@ body {
   text-align: center;
 }
 
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .advantages-item {
   display: flex;
   background-color: #83B3D3;
@@ -178,10 +183,6 @@ body {
 
 .advantages-description:last-child {
   margin-bottom: 0;
-}
-
-.features-wrapper {
-  display: flex;
 }
 
 .features-title {
