@@ -165,10 +165,12 @@ body {
 
 .advantages-wrapper {
   width: 400px;
+  padding-top: 98px;
+  padding-bottom: 86px;
 }
 
 .advantages-title {
-  margin-top: 98px;
+  margin-top: 0;
   margin-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
@@ -202,7 +204,8 @@ body {
 }
 
 .features-item-icon {
-  padding-top: 184px;
+  box-sizing: border-box;
+  padding: 184px 102px 90px 102px;
 }
 
 .features-white {
