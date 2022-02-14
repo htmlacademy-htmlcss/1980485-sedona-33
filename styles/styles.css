@@ -46,6 +46,8 @@ body {
 }
 
 .button {
+  margin: 0;
+  padding: 8px 22px;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -78,6 +80,10 @@ body {
 .logo {
   width: 139px;
   margin-right: 30px;
+}
+
+.page-header-logo {
+  display: block;
 }
 
 .navigation-list {
@@ -179,12 +185,13 @@ body {
 }
 
 .advantages-description {
-  display: block;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
-.advantages-description:last-child {
-  margin-bottom: 0;
+.advantages-description-number {
+  display: block;
+  margin-top: 20px;
 }
 
 .features-wrapper {
@@ -202,6 +209,11 @@ body {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.features-description {
+  margin-top: 14px;
+  margin-bottom: 0;
 }
 
 .features-item {
@@ -241,13 +253,15 @@ body {
 }
 
 .search-hotel-description {
-  margin-bottom: 56px;
+  margin-top: 20px;
+  margin-bottom: 0;
   font-size: 22px;
   line-height: 26px;
 }
 
 .search-hotel-button {
   width: 575px;
+  margin-top: 56px;
   padding: 15px 0;
   font-size: 20px;
   line-height: 36px;
@@ -276,14 +290,22 @@ body {
 }
 
 .newsletter-description {
-  margin-bottom: 46px;
+  margin-top: 20px;
+  margin-bottom: 0;
   font-size: 22px;
   line-height: 26px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 46px;
 }
 
 .field {
   box-sizing: border-box;
   width: 600px;
+  margin: 0;
   padding: 17px 22px;
   font-size: 18px;
   line-height: 26px;
@@ -303,8 +325,7 @@ body {
 .page-footer {
   display: flex;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding: 40px 72px 30px;
   justify-content: space-between;
 }
 
@@ -312,7 +333,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 130px;
-  margin-left: 72px;
 }
 
 .footer-social-item {
@@ -334,7 +354,6 @@ body {
 
 .developer {
   width: 115px;
-  margin-right: 72px;
 }
 
 .footer-phone {
@@ -389,6 +408,10 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.control-input {
+  margin: 0;
 }
 
 .catalog-hotels-button {
@@ -460,38 +483,96 @@ body {
 
 .hotel-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 72px;
   padding-right: 72px;
 }
 
 .hotel-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  box-sizing: border-box;
   width: 340px;
+  margin-right: 18px;
+  padding: 20px;
+}
+
+.hotel-card:nth-child(3n) {
+  margin-right: 0;
 }
 
 .hotel-card-link {
-  font-size: 24px;
-  line-height: 31px;
-  font-weight: 700;
+  width: 100%;
   color: #000000;
   text-decoration: none;
 }
 
-.type-residence,
-.hotel-cost {
+.hotel-card-photo {
+  display: block;
+}
+
+.hotel-card-title {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+}
+
+.type-residence {
+  margin-top: 16px;
+  margin-right: 78px;
   color: #000000;
+}
+
+.hotel-cost {
+  margin-top: 16px;
+  color: #000000;
+}
+
+.button-favourites {
+  margin-left: auto;
+  padding: 8px 12px;
+}
+
+.hotel-card .button {
+  margin-top: 16px;
 }
 
 .button-green {
   background: #7DB54F;
 }
 
+.star-rating {
+  display: block;
+  width: 36px;
+  height: 17px;
+  margin-top: 26px;
+  margin-right: auto;
+  background-image: url(../images/star.svg);
+}
+
+.star-rating-four {
+  width: 72px;
+}
+
+.star-rating-three {
+  width: 54px;
+}
+
 .hotel-card-rating {
+  display: block;
+  box-sizing: border-box;
+  width: 160px;
+  margin-top: 16px;
+  text-align: center;
+  padding: 8px 20px;
   font-size: 16px;
   line-height: 21px;
   color: #000000;
   background-color: #F2F2F2;
+
 }
 
 .upload-more {
@@ -518,11 +599,14 @@ body {
 
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 504px;
   margin-right: auto;
 }
 
-.pagination-item:not(:last-child) {
+.pagination-item {
   margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 .pagination-link {
@@ -565,7 +649,7 @@ body {
 }
 
 .newsletter-inner {
-  padding-top: 72px;
+  padding-top: 64px;
   padding-bottom: 140px;
   color: #000000;
   text-align: center;
