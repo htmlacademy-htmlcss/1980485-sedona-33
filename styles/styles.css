@@ -139,8 +139,7 @@ body {
 }
 
 .description {
-  padding-top: 63px;
-  padding-bottom: 80px;
+  padding: 63px 240px 80px;
 }
 
 .main-title {
@@ -236,8 +235,7 @@ body {
 }
 
 .search-hotel {
-  padding-top: 92px;
-  padding-bottom: 92px;
+  padding: 92px 240px 92px;
   text-align: center;
 }
 
@@ -267,8 +265,7 @@ body {
 }
 
 .newsletter  {
-  padding-top: 94px;
-  padding-bottom: 94px ;
+  padding: 94px 200px;
   background-color: #6b5834;
   background-image: url("../images/newsletter-background.jpg");
   background-size: cover;
@@ -447,6 +444,7 @@ body {
   line-height: 39px;
   font-weight: 700;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .sorting-card-select {
@@ -647,8 +645,7 @@ body {
 }
 
 .newsletter-inner {
-  padding-top: 64px;
-  padding-bottom: 140px;
+  padding: 64px 200px 140px;
   color: #000000;
   text-align: center;
 }
