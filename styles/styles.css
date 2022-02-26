@@ -213,8 +213,11 @@ body {
 
 .main-picture {
   padding: 51px 371px 82px;
-  background: url("../images/background-decoration-vector.svg") no-repeat bottom,
-              url("../images/index-background.jpg") no-repeat center/cover #8DBCDA;
+  background-image: url("../images/background-decoration-vector.svg"), url("../images/index-background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, center;
+  background-color: #8DBCDA;
+  object-fit: cover;
 }
 
 .slogan {
