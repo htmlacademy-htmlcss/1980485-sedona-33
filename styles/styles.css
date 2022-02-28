@@ -191,6 +191,7 @@ body {
   font-size: 10px;
   line-height: 13px;
   font-weight: 400;
+  letter-spacing: 3px;
   color: #FFFFFF;
   background-color: #7DB54F;
   border-radius: 50%;
@@ -920,7 +921,7 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-card-photo:hover {
-  opacity: 0,6;
+  opacity: 0.6;
 }
 
 .hotel-card-photo:focus {
