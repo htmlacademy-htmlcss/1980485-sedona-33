@@ -191,6 +191,7 @@ body {
   font-size: 10px;
   line-height: 13px;
   font-weight: 400;
+  letter-spacing: 3px;
   color: #FFFFFF;
   background-color: #7DB54F;
   border-radius: 50%;
@@ -213,8 +214,11 @@ body {
 
 .main-picture {
   padding: 51px 371px 82px;
-  background: url("../images/background-decoration-vector.svg") no-repeat bottom,
-              url("../images/index-background.jpg") no-repeat center/cover #8DBCDA;
+  background-image: url("../images/background-decoration-vector.svg"), url("../images/index-background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, center;
+  background-color: #8DBCDA;
+  object-fit: cover;
 }
 
 .slogan {
@@ -917,7 +921,7 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-card-photo:hover {
-  opacity: 0,6;
+  opacity: 0.6;
 }
 
 .hotel-card-photo:focus {
