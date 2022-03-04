@@ -682,7 +682,7 @@ body {
   width: 20px;
   height: 20px;
   content: "";
-  background-image: url(../images/tick.svg);
+  background-image: url(../images/tick-checkbox.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
