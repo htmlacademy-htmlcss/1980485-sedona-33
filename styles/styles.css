@@ -287,6 +287,7 @@ body {
 .features-list {
   display: flex;
   flex-wrap: wrap;
+  min-width: 100%;
 }
 
 .features-item-icon {
@@ -828,7 +829,6 @@ background-color: rgba(255, 255, 255, 0.3);
   padding-top: 60px;
 }
 
-
 .button-apply {
   width: 160px;
   margin-bottom: 20px;
@@ -1074,7 +1074,6 @@ background-color: rgba(255, 255, 255, 0.3);
   line-height: 21px;
   color: #000000;
   background-color: #F2F2F2;
-
 }
 
 .upload-more {
@@ -1114,8 +1113,8 @@ background-color: rgba(255, 255, 255, 0.3);
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 55px;
-  height: 55px;
+  min-width: 55px;
+  min-height: 55px;
   padding: 15px;
   font-size: 20px;
   line-height: 26px;
@@ -1245,11 +1244,6 @@ background-color: rgba(255, 255, 255, 0.3);
   font-size: 30px;
   line-height: 40px;
   text-transform: uppercase;
-}
-
-.modal-form {
-  display: grid;
-  grid-template-columns: ;
 }
 
 .input-wrapper {
