@@ -1207,7 +1207,7 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-container-close {
-  display: none;
+  /* display: none; */
 }
 
 .modal-search-hotel {
@@ -1263,7 +1263,7 @@ background-color: rgba(255, 255, 255, 0.3);
 .input-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 11px;
 }
 
 .modal-input-title {
@@ -1287,6 +1287,7 @@ background-color: rgba(255, 255, 255, 0.3);
   background-repeat: no-repeat;
   background-position: top 50% right 19px;
   border-radius: 4px;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
@@ -1314,7 +1315,7 @@ background-color: rgba(255, 255, 255, 0.3);
   width: 420px;
   margin-left: auto;
   font-size: 16px;
-  line-height: 40px;
+  line-height: 29px;
 }
 
 .error-notification {
@@ -1335,6 +1336,7 @@ background-color: rgba(255, 255, 255, 0.3);
 .number-input {
   position: relative;
   width: 44px;
+  height: 50px;
   margin: 0;
   padding: 0;
   border: none;
@@ -1447,6 +1449,7 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-button-find {
+  width: 100%;
   padding: 10px 0;
   font-weight: 700;
   font-size: 20px;
