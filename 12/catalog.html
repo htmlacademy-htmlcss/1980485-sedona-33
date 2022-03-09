@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Гостиницы Седоны</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
     <base href="https://htmlacademy-htmlcss.github.io/1980485-sedona-33/12/">
 </head>
   <body>
@@ -11,7 +13,7 @@
       <header class="page-header">
         <nav class="navigation">
           <a class="logo" href="index.html">
-            <img class="page-header-logo" src="images/logo-sedona.svg" width="139" height="70" alt="Логотип сайта Седона">
+            <img class="page-header-logo" src="images/logo-sedona.svg" width="139" height="70" alt="Логотип сайта Седона.">
           </a>
           <ul class="navigation-list clear-list">
             <li class="navigation-item">
@@ -136,10 +138,10 @@
                 </div>
                 <div class="range-scale">
                   <div class="range-bar">
-                    <button class="range-toggle toggle-min">
+                    <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
-                    <button class="range-toggle toggle-max">
+                    <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
                   </div>
@@ -253,7 +255,7 @@
           <p class="newsletter-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="newsletter-email"></label>
-            <input class="field field-inner" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email">
+            <input class="field field-inner" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
             <button class="button newsletter-button button-blue" type="submit">Подписаться</button>
           </form>
         </section>

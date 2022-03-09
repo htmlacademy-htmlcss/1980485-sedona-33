@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
     <base href="https://htmlacademy-htmlcss.github.io/1980485-sedona-33/12/">
 </head>
   <body>
@@ -11,7 +13,7 @@
       <header class="page-header">
         <nav class="navigation">
           <a class="logo">
-            <img class="page-header-logo" src="images/logo-sedona.svg" width="139" height="70" alt="Логотип сайта Седона">
+            <img class="page-header-logo" src="images/logo-sedona.svg" width="139" height="70" alt="Логотип сайта Седона.">
           </a>
           <ul class="navigation-list clear-list">
             <li class="navigation-item">
@@ -50,7 +52,7 @@
       </header>
       <main class="main-index main-container">
         <div class="main-picture">
-          <img class="slogan" src="images/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona">
+          <img class="slogan" src="images/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona.">
         </div>
         <section class="description">
           <h1 class="main-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -65,7 +67,7 @@
                 <span class="advantages-description-number">— №1 —</span>
                 <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img class="advantages-photo" src="images/city-sedona.jpg" width="800" height="384" alt="Городок Седона">
+              <img class="advantages-photo" src="images/city-sedona.jpg" width="800" height="384" alt="Городок Седона.">
               <ul class="features-list clear-list ">
                 <li class="features-item-icon features-item-house">
                   <h3 class="features-title">Жильё</h3>
@@ -82,7 +84,7 @@
               </ul>
             </li>
             <li class="advantages-item">
-              <img class="advantages-photo" src="images/devils-bridge.jpg" width="800" height="384" alt="Мост дьявола">
+              <img class="advantages-photo" src="images/devils-bridge.jpg" width="800" height="384" alt="Мост дьявола.">
               <div class="advantages-wrapper">
                 <h3 class="advantages-title">Там есть<br> мост дьявола</h3>
                 <span class="advantages-description-number">— №2 —</span>
@@ -117,7 +119,7 @@
           <p class="newsletter-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="newsletter-email"></label>
-            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email">
+            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
             <button class="button newsletter-button button-blue" type="submit">Подписаться</button>
           </form>
         </section>
@@ -174,15 +176,17 @@
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="input-wrapper">
               <label class="modal-input-title" for="arrival-date">Дата заезда:</label>
               <input class="date-input" type="text" id="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" required>
+              <button class="calendar-button" type="button"></button>
               <span class="notification error-notification">Мы не можем отправить вас в прошлое.</span>
             </div>
             <div class="input-wrapper">
               <label class="modal-input-title" for="departure date">Дата выезда:</label>
               <input class="date-input" type="text" id="departure date" value="1 сентября 2021" placeholder="Укажите дату" required>
+              <button class="calendar-button" type="button"></button>
               <span class="notification positive notification">На эти даты есть свободные номера. Пока есть.</span>
             </div>
             <div class="number-people">
@@ -233,7 +237,7 @@
                 </button>
               </div>
             </div>
-            <button class="button button-blue modal-button-find">Найти</button>
+            <button class="button button-blue modal-button-find" type="submit">Найти</button>
           </form>
         </section>
       </div>
