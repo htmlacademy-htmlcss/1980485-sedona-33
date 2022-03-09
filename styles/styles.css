@@ -90,6 +90,7 @@ body {
 .button-blue:focus {
   background-color: #68A2CA;
   outline: 3px solid #756257;
+  outline-offset: -3px;
 }
 
 .clear-list {
@@ -147,7 +148,7 @@ body {
 .navigation-link-current::after {
   position: absolute;
   right: 17px;
-  bottom: 0;
+  bottom: 2px;
   left: 17px;
   height: 2px;
   background-color: #756257;
@@ -435,6 +436,7 @@ body {
 .field:invalid {
   background-color: #FFFFFF;
   outline: 2px solid #FF5757;
+  outline-offset: -2px;
 }
 
 .newsletter-button {
@@ -599,7 +601,7 @@ body {
 .breadcrumbs-item:first-child::before {
   position: absolute;
   left: 33px;
-  top: 9px;
+  top: 5px;
   width: 5px;
   height: 8px;
   content: "";
@@ -679,14 +681,18 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before {
-  display: block;
+.control-mark:not(.control-mark-radio)::before {
+  display: none;
   width: 20px;
   height: 20px;
   content: "";
-  background-image: url(../images/tick-checkbox.svg);
+  background-image: url("../images/tick-checkbox.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  display: block;
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -795,6 +801,7 @@ background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
   width: 20px;
   height: 20px;
+  background-color: #FFFFFF;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -851,6 +858,7 @@ background-color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   text-align: center;
   border: 0;
+  cursor: pointer;
 }
 
 .button-reset:hover {
@@ -872,6 +880,7 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .sorting-card-result {
+  align-self: center;
   margin: 0;
   max-width: 372px;
   font-size: 30px;
@@ -887,7 +896,7 @@ background-color: rgba(255, 255, 255, 0.3);
   margin-left: auto;
   margin-right: 80px;
   padding-left: 19px;
-  background-image: url(../images/dropdown.svg);
+  background-image: url("../images/dropdown.svg");
   background-repeat: no-repeat;
   background-position: 250px center;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -923,7 +932,7 @@ background-color: rgba(255, 255, 255, 0.3);
   width: 48px;
   height: 48px;
   margin-right: 8px;
-  border: 2px solid #E6E6E6;
+  outline: 2px solid #E6E6E6;
   border-radius: 4px;
 }
 
@@ -932,12 +941,12 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .mode-toggle-item-current {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 
 .mode-toggle-item:hover,
 .mode-toggle-item:focus {
-  border: 2px solid #83B3D3;
+  outline: 2px solid #83B3D3;
   border-radius: 4px;
 }
 
@@ -1082,7 +1091,7 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .upload-more {
-  margin: 34px 72px 34px;
+  margin: 34px 72px 30px;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
 }
@@ -1169,7 +1178,7 @@ background-color: rgba(255, 255, 255, 0.3);
   color: #333333;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
-  background-image: url(../images/dropdown.svg);
+  background-image: url("../images/dropdown.svg");
   background-repeat: no-repeat;
   background-position: 127px center;
   -webkit-appearance: none;
@@ -1207,7 +1216,7 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-container-close {
-  /* display: none; */
+  display: none;
 }
 
 .modal-search-hotel {
@@ -1261,6 +1270,7 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .input-wrapper {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 11px;
@@ -1283,9 +1293,6 @@ background-color: rgba(255, 255, 255, 0.3);
   width: 420px;
   padding: 5px 5px 5px 19px;
   background-color: #F2F2F2;
-  background-image: url(../images/calendar.svg);
-  background-repeat: no-repeat;
-  background-position: top 50% right 19px;
   border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
@@ -1310,6 +1317,17 @@ background-color: rgba(255, 255, 255, 0.3);
   outline: 2px solid #000000;
 }
 
+.calendar-button  {
+  position: absolute;
+  top: 18px;
+  right: 19px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/calendar.svg");
+  border: none;
+  cursor: pointer;
+}
+
 .notification {
   display: block;
   width: 420px;
@@ -1329,21 +1347,30 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .number-people-wrapper {
+  position: relative;
   display: flex;
+  justify-content: space-around;
+  width: 133px;
+  min-height: 50px;
+  background-color: #F2F2F2;
 }
 
 .modal-button,
 .number-input {
-  position: relative;
-  width: 44px;
-  height: 50px;
+  display: block;
   margin: 0;
   padding: 0;
-  border: none;
   background-color: #F2F2F2;
+  border: none;
+}
+
+.modal-button {
+  width: 19px;
+  height: 19px;
 }
 
 .number-input {
+  max-width: 44px;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -1362,16 +1389,20 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-button-minus {
-  border-radius: 4px 0 0 4px;
+  position: absolute;
+  top: 15px;
+  left: 13px;
   cursor: pointer;
 }
 
 .modal-button-plus {
-  border-radius: 0 4px 4px 0;
+  position: absolute;
+  top: 15px;
+  right: 13px;
   cursor: pointer;
 }
 
-.button-icon  {
+.button-icon {
   position: absolute;
   top: 0;
   right: 0;
@@ -1390,6 +1421,7 @@ background-color: rgba(255, 255, 255, 0.3);
 
 .modal-button:focus .button-icon {
   outline: 3px solid #83B3D3;
+  border-radius: 4px;
   opacity: 1;
 }
 

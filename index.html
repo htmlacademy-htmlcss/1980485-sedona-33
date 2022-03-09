@@ -116,7 +116,7 @@
           <p class="newsletter-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="newsletter-email"></label>
-            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email">
+            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
             <button class="button newsletter-button button-blue" type="submit">Подписаться</button>
           </form>
         </section>
@@ -173,15 +173,17 @@
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="input-wrapper">
               <label class="modal-input-title" for="arrival-date">Дата заезда:</label>
               <input class="date-input" type="text" id="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" required>
+              <button class="calendar-button" type="button"></button>
               <span class="notification error-notification">Мы не можем отправить вас в прошлое.</span>
             </div>
             <div class="input-wrapper">
               <label class="modal-input-title" for="departure date">Дата выезда:</label>
               <input class="date-input" type="text" id="departure date" value="1 сентября 2021" placeholder="Укажите дату" required>
+              <button class="calendar-button" type="button"></button>
               <span class="notification positive notification">На эти даты есть свободные номера. Пока есть.</span>
             </div>
             <div class="number-people">
@@ -232,7 +234,7 @@
                 </button>
               </div>
             </div>
-            <button class="button button-blue modal-button-find">Найти</button>
+            <button class="button button-blue modal-button-find" type="submit">Найти</button>
           </form>
         </section>
       </div>
