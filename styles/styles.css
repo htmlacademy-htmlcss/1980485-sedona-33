@@ -601,7 +601,7 @@ body {
 .breadcrumbs-item:first-child::before {
   position: absolute;
   left: 33px;
-  top: 5px;
+  top: 6px;
   width: 5px;
   height: 8px;
   content: "";
