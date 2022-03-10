@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title>Гостиницы Седоны</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
   </head>
   <body>
     <div class="container">
       <header class="page-header">
         <nav class="navigation">
           <a class="logo" href="index.html">
-            <img class="page-header-logo" src="images/logo-sedona.svg" width="139" height="70" alt="Логотип сайта Седона">
+            <img class="page-header-logo" src="images/logo-sedona.svg" width="139" height="70" alt="Логотип сайта Седона.">
           </a>
           <ul class="navigation-list clear-list">
             <li class="navigation-item">
@@ -72,20 +74,23 @@
                 <ul class="catalog-filter-list clear-list">
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="pool" checked>
+                      <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
                       Бассейн
+                      <span class="control-mark"></span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="parking" checked>
+                      <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
                       Парковка
+                      <span class="control-mark"></span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="wi-fi">
+                      <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
                       WI-FI
+                      <span class="control-mark"></span>
                     </label>
                   </li>
                 </ul>
@@ -95,20 +100,23 @@
                 <ul class="catalog-filter-list clear-list">
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="radio" value="hotel" checked>
+                      <input class="control-input visually-hidden" type="radio" name="radio" value="hotel" checked>
                       Гостиница
+                      <span class="control-mark control-mark-radio"></span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="radio" value="motel">
+                      <input class="control-input visually-hidden" type="radio" name="radio" value="motel">
                       Мотель
+                      <span class="control-mark control-mark-radio"></span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="radio" value="appartments">
+                      <input class="control-input visually-hidden" type="radio" name="radio" value="appartments">
                       Аппартаменты
+                      <span class="control-mark control-mark-radio"></span>
                     </label>
                   </li>
                 </ul>
@@ -129,10 +137,10 @@
                 </div>
                 <div class="range-scale">
                   <div class="range-bar">
-                    <button class="range-toggle toggle-min">
+                    <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
-                    <button class="range-toggle toggle-max">
+                    <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
                   </div>
@@ -246,7 +254,7 @@
           <p class="newsletter-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="newsletter-email"></label>
-            <input class="field field-inner" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email">
+            <input class="field field-inner" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
             <button class="button newsletter-button button-blue" type="submit">Подписаться</button>
           </form>
         </section>
