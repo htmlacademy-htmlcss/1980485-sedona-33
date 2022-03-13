@@ -124,15 +124,15 @@
               <div class="range">
                 <span class="catalog-filter-title">Стоимость, ₽:</span>
                 <div class="range-value-wrapper">
-                  <div class="value-min-wrapper">
+                  <div class="value-wrapper value-wrapper-min">
                     <label class="visually-hidden" for="min-price">Задать минимальную стоимость.</label>
                     <input class="range-value range-value-min" id="min-price" type="text" value="0">
-                    <span class="value-min">от</span>
+                    <span class="value value-min">от</span>
                   </div>
-                  <div class="value-max-wrapper">
+                  <div class="value-wrapper value-wrapper-max">
                     <label class="visually-hidden" for="max-price">Задать максимальную стоимость.</label>
                     <input class="range-value range-value-max" id="max-price" type="text" value="9000">
-                    <span class="value-max">до</span>
+                    <span class="value value-max">до</span>
                   </div>
                 </div>
                 <div class="range-scale">
@@ -254,7 +254,7 @@
           <p class="newsletter-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="newsletter-email"></label>
-            <input class="field field-inner" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+            <input class="field field-inner field-error" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
             <button class="button newsletter-button button-blue" type="submit">Подписаться</button>
           </form>
         </section>
