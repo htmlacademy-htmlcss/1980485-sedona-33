@@ -418,6 +418,7 @@ body {
   width: 600px;
   margin: 0;
   padding: 17px 22px;
+  font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   border-radius: 10px 0px 0px 10px;
@@ -431,12 +432,7 @@ body {
 .field:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
-}
-
-.field:invalid {
-  background-color: #FFFFFF;
-  outline: 2px solid #FF5757;
-  outline-offset: -2px;
+  outline-offset: -3px;
 }
 
 .newsletter-button {
@@ -714,81 +710,100 @@ body {
   opacity: 1;
 }
 
-.range {
-  width: 287px;
-  margin-left: auto;
-}
-
 .range-value-wrapper {
   display: flex;
-  margin-top: 34px;
+  width: 287px;
+  margin-top: 30px;
 }
 
-.value-min-wrapper {
-  position: relative;
-}
-
-.value-max-wrapper {
-  position: relative;
+.value {
+  opacity: 0.3;
 }
 
 .range-value {
-  box-sizing: border-box;
-  width: 143.5px;
-  height: 48px;
-  padding-left: 16px;
+  width: 86px;
+  margin: 0;
+  padding: 0;
   background-color: transparent;
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 23px;
+  width: 86px;
   color: #ffffff;
+  border: none;
+  outline: none;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+.range-value::-webkit-outer-spin-button,
+.range-value::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.value-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  padding-top: 14px;
+  padding-bottom: 11px;
   border: 2px solid #ffffff;
 }
 
-.range-value-min {
-  border-right: 1px solid #ffffff;
-  border-radius: 4px 0 0 4px;
-}
-
-
-.range-value-max {
-  border-left: 1px solid #ffffff;
-  border-radius: 0 4px 4px 0;
-}
-
-.value-min {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  opacity: 0.3;
-}
-
-.value-max {
-  position: absolute;
-  top: 12px;
-  right: 17px;
-  opacity: 0.3;
-}
-
-.range-value:hover {
+.value-wrapper:hover:not(:focus-within) {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
-.range-value:focus {
-  outline-color: rgba(129, 179, 210, 1);
-  box-shadow: 0px 0px 0px 3px #81B3D2;
-}
-
-.range-value:active {
+.value-wrapper:active {
+  border-color: #ffffff;
   background-color: #756257;
 }
 
+.value-wrapper:focus-within {
+  box-shadow: 0 0 0 3px #81B3D2, inset 0 0 0 3px #81B3D2;
+  position: relative;
+  z-index: 1;
+}
+
+.value-wrapper-min {
+  padding-left: 17px;
+  padding-right: 16px;
+  border-radius: 4px 0 0 4px;
+  border-right-width: 0;
+}
+
+.value-wrapper-min:focus-within {
+  border-right-width: 2px;
+}
+
+.value-wrapper-min:focus-within + .value-wrapper {
+  border-left-width: 0;
+}
+
+.value-wrapper-min:hover {
+  border-right-width: 2px;
+}
+
+.value-wrapper-min:hover + .value-wrapper:focus-within {
+  margin-left: -2px;
+}
+
+.value-wrapper-min:hover + .value-wrapper:not(:focus-within) {
+  border-left-width: 0;
+}
+
+.value-wrapper-max {
+  padding-left: 17px;
+  padding-right: 17px;
+  border-radius: 0 4px 4px 0;
+}
+
 .range-scale {
-position: relative;
-width: 287px;
-height: 4px;
-margin-top: 32px;
-background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  width: 287px;
+  height: 4px;
+  margin-top: 32px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .range-bar {
@@ -1162,12 +1177,14 @@ background-color: rgba(255, 255, 255, 0.3);
 .pagination-page {
   width: 175px;
   margin-right: 51px;
+  margin-bottom: 14px;
   color: #000000;
 }
 
 .select-control {
   box-sizing: border-box;
   width: 160px;
+  margin-bottom: 12px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 18px;
@@ -1319,13 +1336,30 @@ background-color: rgba(255, 255, 255, 0.3);
 
 .calendar-button  {
   position: absolute;
-  top: 18px;
-  right: 19px;
-  width: 15px;
-  height: 15px;
+  top: 15px;
+  right: 16px;
+  width: 21px;
+  height: 21px;
   background-image: url("../images/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   border: none;
   cursor: pointer;
+  opacity: 0.3;
+}
+
+.calendar-button:hover {
+  opacity: 1;
+}
+
+.calendar-button:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.calendar-button:active {
+  opacity: 0.2;
 }
 
 .notification {
@@ -1453,7 +1487,7 @@ background-color: rgba(255, 255, 255, 0.3);
   display: none;
   box-sizing: border-box;
   width: 256px;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 25px 22px;
   background-color: #333333;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
