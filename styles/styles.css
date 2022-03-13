@@ -710,6 +710,10 @@ body {
   opacity: 1;
 }
 
+.range {
+  margin-left: auto;
+}
+
 .range-value-wrapper {
   display: flex;
   width: 287px;
